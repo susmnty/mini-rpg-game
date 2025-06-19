@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini RPG Battle Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Character Selection -->
+  <div class="character-select" id="characterSelect">
+    <h1>Choose Your Hero</h1>
+    <div class="character-options">
+      <img src="wizard.png" alt="Wizard" class="char" onclick="selectCharacter('wizard')" />
+      <img src="knight.png" alt="Knight" class="char" onclick="selectCharacter('knight')" />
+    </div>
+  </div>
+
+  <!-- Main Game UI -->
+  <div class="game-container" id="gameContainer" style="display:none;">
+    <h1>⚔️ Mini RPG Battle Game</h1>
+
+    <div class="battle-area">
+      <div class="player">
+        <h2 id="playerTitle">🧙‍♂️ You</h2>
+        <img id="playerImg" src="" class="character-img" />
+        <div class="health-bar" id="player-health"></div>
+      </div>
+
+      <div class="enemy">
+        <h2 id="enemyName">👹 Enemy</h2>
+        <img id="enemyImg" src="goblin.png" class="character-img" />
+        <div class="health-bar" id="enemy-health"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="attackBtn">Attack</button>
+      <button id="healBtn">Heal</button>
+      <button id="defendBtn">Defend</button>
+    </div>
+
+    <div id="log" class="log"></div>
+  </div>
+
+  <!-- End Game Screen -->
+  <div id="endScreen" class="end-screen" style="display:none;">
+    <h1 id="endMessage">Game Over</h1>
+    <button onclick="location.reload()">🔁 Play Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
